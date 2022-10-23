@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Lobster&family=Poppins:wght@300;400;500;700&display=swap');
+:root{
+    --clkcolor: rgb(25, 9, 247);
+
+}
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    background-color: #2f3640;
+    height:100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.analogclk{
+    height:500px;
+    width: 500px;
+    background-color: #fff;
+    border-radius: 50%;
+    border:10px ridge var(--clkcolor);
+    position: relative;
+}
+.analogclk::before{
+    content: "Royal clks";
+    color:#003;
+    position: absolute;
+    top:25%;
+    left:49%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    font-family:'lobster',sans-serif;
+
+}
+.analogclk::after{
+    content:'' ;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color:var(--clkcolor) ;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+}
+.number{
+    --rotate:0;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    color: var(--clkcolor);
+    font-size: 25px;
+    transform: rotate(var(--rotate));
+    text-align: center;
+}
+
+.number-1{transform: rotate(30deg);}
+.number-2{transform: rotate(60deg);}
+.number-3{transform: rotate(90deg);}
+.number-4{transform: rotate(120deg);}
+.number-5{transform: rotate(150deg);}
+.number-6{transform: rotate(180deg);}
+.number-7{transform: rotate(210deg);}
+.number-8{transform: rotate(240deg);}
+.number-9{transform: rotate(270deg);}
+.number-10{transform: rotate(300deg);}
+.number-11{transform: rotate(330deg);}
+
+
+.needle{
+    --rotation:0;
+    position: absolute;
+    width: 10px;
+    height: 40%;
+    left: 51%;
+    bottom: 48%;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+    transform-origin: bottom;
+    z-index: 8;
+    border: 1px;
+    border-radius:0% 30% ;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+
+}
+.sec{
+    background-color: rgb(32, 32, 36);
+    width: 3px;
+    height: 42%;
+   
+}
+.mins{
+    background-color: rgb(22, 24, 39);
+    width: 6px;
+    height: 36%;
+   
+}
+.hrs{
+    background-color: rgb(22, 20, 29);
+    width: 9px;
+    height: 30%;
+}
+/* .number::before{
+    content:'';
+    width:10px;
+    height:10px;
+    background-color: var(--red);
+    border-radius: 50%;
+    position: absolute;
+
+} */
+
+@media screen and (max-width:600px){
+    .analogclk{
+        height:200px;
+        width: 200px;
+        background-color: rgb(197, 210, 211);
+        border-radius: 50%;
+        border:10px ridge var(--clkcolor);
+        position: relative;
+    }
+    .analogclk::before{
+        content: "Royal clks";
+        color:#003;
+        position: absolute;
+        top:25%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        font-size: 10px;
+        font-family:'lobster',sans-serif;
+    
+    }
+    .analogclk::after{
+        content:'' ;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color:var(--clkcolor) ;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+    }
+    .number{
+        --rotate:0;
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        color: var(--clkcolor);
+        font-size: 15px;
+        transform: rotate(var(--rotate));
+        text-align: center;
+    }
+        
+    .number-1{transform: rotate(30deg);}
+    .number-2{transform: rotate(60deg);}
+    .number-3{transform: rotate(90deg);}
+    .number-4{transform: rotate(120deg);}
+    .number-5{transform: rotate(150deg);}
+    .number-6{transform: rotate(180deg);}
+    .number-7{transform: rotate(210deg);}
+    .number-8{transform: rotate(240deg);}
+    .number-9{transform: rotate(270deg);}
+    .number-10{transform: rotate(300deg);}
+    .number-11{transform: rotate(330deg);}
+    
+    .sec{
+        background-color: rgb(32, 32, 36);
+        width: 3px;
+        height: 42%;
+       
+    }
+    .mins{
+        background-color: rgb(22, 24, 39);
+        width: 4px;
+        height: 36%;
+       
+    }
+    .hrs{
+        background-color: rgb(22, 20, 29);
+        width: 6px;
+        height: 30%;
+    }
+
+}
